@@ -22,7 +22,7 @@ Columns:
 - Neighbourhood
 - Location 1
 
-I will pull the date, service area, neighbourhood, and location into a table named Requests
+I will pull the date, service area, service request, neighbourhood, and location into a table named Requests
 
 ## [Tree Inventory](https://data.winnipeg.ca/Parks/Tree-Inventory/hfwk-jp4h)
 Contains information about public trees in Winnipeg.
