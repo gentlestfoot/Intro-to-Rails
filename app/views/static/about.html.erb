@@ -1,7 +1,70 @@
-<div class="card">
-  <div class="card-body">
-    <h1 class="card-title">About</h1>
-    Hello?
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col">
+      <h1 class="card-title">About</h1>
+      This project has the neighbourhoods of Winnipeg and the 311 requests and trees contained in them.
+
+      <div class="card">
+        <p class="card-text">
+          <h3 class="card-title"><a href="https://data.winnipeg.ca/City-Planning/Neighbourhood/fen6-iygi">Boundaries of Neighbourhood Characterization Areas</a></h3>
+          Contains polygons of each neighbourhood area in Winnipeg.
+          <br><br>
+          Columns:
+          <ul>
+            <li>the_geom</li>
+            <li>name</li>
+            <li>id</li>
+          </ul>
+          <br>
+          I will pull the name and polygons (from the_geom column) into a table named Neighbourhoods.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://data.winnipeg.ca/Contact-Centre-311/311-Service-Request/4her-3th5">311 Service Request</a></h3>
+        <p class="card-text">
+          Contains all service requests received by 311 in Winnipeg.
+          <br><br>
+          Columns:
+            <ul>
+              <li>Date</li>
+              <li>Service Area</li>
+              <li>Service Request</li>
+              <li>Ward</li>
+              <li>Neighbourhood</li>
+              <li>Location 1</li>
+            </ul>
+          I will pull the date, service area, service request, neighbourhood, and location into a table named Requests. Requests will be linked to the neighbourhood they exist in.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://data.winnipeg.ca/Parks/Tree-Inventory/hfwk-jp4h">Tree Inventory</a></h3>
+        <p class="card-text">
+          Contains information about public trees in Winnipeg.
+          <br><br>
+          Columns:
+          <ul>
+            <li>Tree ID</li>
+            <li>Botanical Name</li>
+            <li>Common Name</li>
+            <li>Electoral Ward</li>
+            <li>Neighbourhood</li>
+            <li>Diameter at Breast Height</li>
+            <li>Park</li>
+            <li>Location Class</li>
+            <li>Property Type</li>
+            <li>Street</li>
+            <li>Street From</li>
+            <li>Street To</li>
+            <li>X</li>
+            <li>Y</li>
+            <li>DED Tag Number</li>
+            <li>Location</li>
+          </ul>
+          I will pull the common name, neighbourhood, diameter, and location into a table named Trees. Trees will be linked to the neighbourhood they exist in.
+        </p>
+      </div>
+    </div>
   </div>
-  <button type="button" class="btn btn-primary">Primary</button>
 </div>
