@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_02_004410) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_02_045255) do
   create_table "neighbourhoods", force: :cascade do |t|
     t.string "name"
     t.text "polygons"
@@ -24,6 +24,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_02_004410) do
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "neighbourhood_id", null: false
+    t.index ["neighbourhood_id"], name: "index_requests_on_neighbourhood_id"
   end
 
   create_table "trees", force: :cascade do |t|
@@ -32,6 +34,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_02_004410) do
     t.integer "diameter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "neighbourhood_id", null: false
+    t.index ["neighbourhood_id"], name: "index_trees_on_neighbourhood_id"
   end
 
+  add_foreign_key "requests", "neighbourhoods"
+  add_foreign_key "trees", "neighbourhoods"
 end
