@@ -1,0 +1,32 @@
+<%= form_with(model: tree) do |form| %>
+  <% if tree.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(tree.errors.count, "error") %> prohibited this tree from being saved:</h2>
+
+      <ul>
+        <% tree.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :common_name, style: "display: block" %>
+    <%= form.text_field :common_name %>
+  </div>
+
+  <div>
+    <%= form.label :location, style: "display: block" %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div>
+    <%= form.label :diameter, style: "display: block" %>
+    <%= form.number_field :diameter %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

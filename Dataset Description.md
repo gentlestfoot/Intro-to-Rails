@@ -22,7 +22,7 @@ Columns:
 - Neighbourhood
 - Location 1
 
-I will pull the date, service area, service request, neighbourhood, and location into a table named Requests
+I will pull the date, service area, service request, neighbourhood, and location into a table named Requests. Requests will be linked to the neighbourhood they exist in.
 
 ## [Tree Inventory](https://data.winnipeg.ca/Parks/Tree-Inventory/hfwk-jp4h)
 Contains information about public trees in Winnipeg.
@@ -45,4 +45,4 @@ Columns:
 - DED Tag Number
 - Location
 
-I will pull the common name, neighbourhood, diameter, and location into a table named Trees.
+I will pull the common name, neighbourhood, diameter, and location into a table named Trees. Trees will be linked to the neighbourhood they exist in.
