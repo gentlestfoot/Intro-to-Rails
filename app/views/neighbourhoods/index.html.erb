@@ -2,12 +2,13 @@
 
 <h1>Neighbourhoods</h1>
 
-<div id="neighbourhoods">
+<div id="neighbourhoods" class="container">
   <% @neighbourhoods.each do |neighbourhood| %>
-    <%= render neighbourhood %>
-    <p>
-      <%= link_to "Show this neighbourhood", neighbourhood %>
-    </p>
+    <div class="row">
+      <div class="col">
+        <%= link_to neighbourhood.name, neighbourhood, class: "btn btn-primary" %>
+      </div>
+    </div>
   <% end %>
 </div>
 
