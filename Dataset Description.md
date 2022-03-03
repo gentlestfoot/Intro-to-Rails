@@ -11,6 +11,8 @@ Columns:
 
 I will pull the name and polygons (from the_geom column) into a table named Neighbourhoods.
 
+Neighbourhoods will have one to many relationships with trees and requests.
+
 ## [311 Service Request](https://data.winnipeg.ca/Contact-Centre-311/311-Service-Request/4her-3th5)
 Contains all service requests received by 311 in Winnipeg.
 
