@@ -1,6 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @tree %>
+<%= render partial: "neighbourhoods/name_link", object: @tree.neighbourhood %>
 
 <div>
   <%= link_to "Edit this tree", edit_tree_path(@tree) %> |
